@@ -11,7 +11,7 @@
 
 body {
     display: grid;
-    grid-template:  6rem 8rem auto 3rem / repeat(12  , 1fr);
+    grid-template:  6rem auto 3rem / repeat(12  , 1fr);
 }
 
 header {
@@ -21,3 +21,15 @@ header {
     justify-content: space-between;
 }
 
+footer {
+    grid-column: 2/12;
+    grid-row: 3/4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer > p > a:visited, footer > p > a:active  {
+    text-decoration: none;
+    color: black;
+}
