@@ -6,7 +6,6 @@
 
 :root {
     --max-width: max(1150px);
-    --padding: calc(100% - var(--max-width) )
 }
 
 body {
@@ -14,14 +13,54 @@ body {
     grid-template:  6rem auto 3rem / repeat(12  , 1fr);
 }
 
+/* Header */
+
 header {
     grid-column: 2 / 12 ;
     background-color: red;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
+/* Main */
+
+main {
+    grid-column: 2/12;
+}
+
+#button-container {
+    height: 6rem;
+    background: violet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#button-container > button {
+    padding: 0.5rem 0.75rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+#book-grid{
+    background-color: yellowgreen;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: calc(1rem + 1vw)
+}   
+
+#book-grid > div{
+    height: 275px;
+    background-color: black;
+}
+
+/* Footer */
+
 footer {
+    background-color: aliceblue;
     grid-column: 2/12;
     grid-row: 3/4;
     display: flex;
