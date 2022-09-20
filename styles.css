@@ -72,3 +72,77 @@ footer > p > a:visited, footer > p > a:active  {
     text-decoration: none;
     color: black;
 }
+
+/* Modal */
+
+.modal {
+    position: fixed;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 250ms ease-in-out;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    width: 250px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: burlywood;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.25rem;
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal > p {
+    font-weight: bold;
+}
+
+.modal > form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.modal > form > input {
+    margin: 10px 0;
+    height: 2rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    padding-left: 10px;
+}
+
+.modal > form > div {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    font-weight: 600;   
+}
+
+.modal > form > button {
+    margin-top: 10px;
+    height: 2rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 250ms ease-in-out;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(117, 117, 117, 0.5);
+    pointer-events: none;
+}
+
+#overlay.active{
+    opacity: 1;
+    pointer-events: all;
+}
