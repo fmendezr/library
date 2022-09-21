@@ -45,7 +45,20 @@ submitBook.addEventListener("click", () => {
 })
 
 // Display books 
-
+const displayBook = () => {
+    const container = document.createElement("div");
+    container.classList.add("library-display")
+    const titleText = document.createElement("p");
+    titleText.classList.add("property");
+    const authorText = document.createElement("p");
+    authorText.classList.add("property");
+    const pagesText = document.createElement("p");
+    pagesText.classList.add("property");
+    const readBtn = document.createElement("button");
+    readBtn.classList.add("property chag");
+    const rmBtn = document.getElementById("button");
+    rmBtn.classList.add("property rm");
+}
 
 // Make pop up form 
 const openModalButton = document.getElementById("button");
