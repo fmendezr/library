@@ -44,6 +44,9 @@ submitBook.addEventListener("click", () => {
     library.addBook(title)
 })
 
+// Display books 
+
+
 // Make pop up form 
 const openModalButton = document.getElementById("button");
 const overlay = document.getElementById("overlay");
