@@ -78,7 +78,6 @@ footer > p > a:visited, footer > p > a:active  {
 .modal {
     position: fixed;
     transform: translate(-50%, -50%) scale(0);
-    transition: 250ms ease-in-out;
     top: 50%;
     left: 50%;
     z-index: 10;
@@ -133,7 +132,6 @@ footer > p > a:visited, footer > p > a:active  {
 #overlay {
     position: fixed;
     opacity: 0;
-    transition: 250ms ease-in-out;
     top: 0;
     right: 0;
     bottom: 0;
@@ -145,4 +143,11 @@ footer > p > a:visited, footer > p > a:active  {
 #overlay.active{
     opacity: 1;
     pointer-events: all;
+}
+
+/* trial */
+
+#trial {
+    width: 50%;
+    height: 20%;
 }

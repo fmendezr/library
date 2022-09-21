@@ -20,7 +20,9 @@
             <button id="button" data-model-target="#modal">Add Book</button>
         </div>
         <div id="book-grid">
-            <div></div>
+            <div>
+                <button id="trial"></button>
+            </div>
             <div></div>
             <div></div>
             <div></div>
@@ -31,15 +33,15 @@
     </footer>
     <div class="modal" id="modal">
         <p>Add New Book</p>
-        <form>
-            <input type="text" name="title" id="title" placeholder="Title">
-            <input type="text" name="author" id="author" placeholder="Author">
-            <input type="number" name="numPages" id="numPages" placeholder="Pages">
+        <form id="modal-form">
+            <input type="text" name="title" id="title" placeholder="Title" required>
+            <input type="text" name="author" id="author" placeholder="Author" required>
+            <input type="number" name="pages" id="pages" placeholder="Pages" required>
             <div>
                 <lable>Have you read it?</lable>
                 <input type="checkbox" name="read" id="read">
             </div>
-            <button id="add-book-btn" type="submit">Submit</button>
+            <button id="submit-book">Submit</button>
         </form>
     </div>
     <div id="overlay"></div>
