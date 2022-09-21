@@ -57,12 +57,14 @@ openModalButton.addEventListener("click", () => {
 overlay.addEventListener("click", () => {
         modal.classList.remove("active");
         overlay.classList.remove("active");
+        document.getElementById("modal-form").reset();
     }
 )
 
 submitBook.addEventListener("click", () => {
         modal.classList.remove("active");
-        overlay.classList.remove("active")
+        overlay.classList.remove("active");
+        document.getElementById("modal-form").reset();
 })
 
 // prevent form from reloading page
