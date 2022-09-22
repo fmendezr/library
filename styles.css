@@ -11,17 +11,23 @@
 
 body {
     display: grid;
-    grid-template:  6rem auto 3rem / repeat(12  , 1fr);
+    grid-template:  6rem minmax(calc(100vh - 9rem), auto) 3rem / repeat(12  , 1fr);
 }
 
 /* Header */
 
 header {
     grid-column: 2 / 12 ;
-    background-color: red;
+    background-color: brown;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 1.8rem;
+}
+
+
+.extra-div {
+    background-color: brown;
 }
 
 /* Main */
@@ -32,21 +38,21 @@ main {
 
 #button-container {
     height: 6rem;
-    background: violet;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 #button-container > button {
-    padding: 0.5rem 0.75rem;
+    padding: 0.75rem 1rem;
     font-size: 1.5rem;
     font-weight: 600;
     border-radius: 10px;
+    background-color: white;
+    border: 3px solid rgb(71, 19, 19);
 }
 
 #book-grid{
-    background-color: yellowgreen;
     height: auto;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -70,7 +76,8 @@ main {
     font-size: 22px;
     font-weight: 600;
     align-items: center;
-    background-color: blanchedalmond;   
+    background-color: rgba(165, 42, 42, 0.14);
+    border: 3px solid rgb(71, 19, 19);   
 }
 
 .property {
@@ -83,24 +90,24 @@ main {
     font-size: 20px;
     font-weight: 600;
     border-radius: 10px;
+    border: 2px solid rgb(71, 19, 19);
 }
 
 .rm {
-    background-color: rgba(255, 0, 0, 0.500);
+    background-color: brown;
 }
 
 .chg.read{
-    background-color: rgba(0, 255, 13, 0.5);
+    background-color: rgb(25, 93, 12);
 }
 
 .chg.not-read{
-    background-color: rgba(255, 0, 0, 0.500);
+    background-color: brown;
 }
 
 /* Footer */
 
 footer {
-    background-color: aliceblue;
     grid-column: 2/12;
     grid-row: 3/4;
     display: flex;
@@ -110,7 +117,7 @@ footer {
 
 footer > p > a:visited, footer > p > a:active  {
     text-decoration: none;
-    color: black;
+    color: rgb(71, 19, 19);
 }
 
 /* Modal */
@@ -124,7 +131,8 @@ footer > p > a:visited, footer > p > a:active  {
     width: 250px;
     padding: 10px;
     border-radius: 15px;
-    background-color: burlywood;
+    background-color: brown;
+    border: 3px solid rgb(118, 29, 29);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -152,6 +160,7 @@ footer > p > a:visited, footer > p > a:active  {
     border-radius: 0.5rem;
     font-size: 1rem;
     padding-left: 10px;
+    border: 2px solid rgb(118, 29, 29);
 }
 
 .modal > form > div {
@@ -167,6 +176,7 @@ footer > p > a:visited, footer > p > a:active  {
     border-radius: 0.5rem;
     font-size: 1rem;
     font-weight: bold;
+    border: 2px solid rgb(118, 29, 29);
 }
 
 #overlay {
