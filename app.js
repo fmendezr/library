@@ -41,23 +41,41 @@ submitBook.addEventListener("click", () => {
     pages = document.getElementById("pages").value;
     read = document.getElementById("read").checked;
     title = new Book(title, author, pages, read);
-    library.addBook(title)
+    library.addBook(title);
+    updateDisplay();
 })
 
-// Display books 
-const displayBook = () => {
-    const container = document.createElement("div");
-    container.classList.add("library-display")
-    const titleText = document.createElement("p");
-    titleText.classList.add("property");
-    const authorText = document.createElement("p");
-    authorText.classList.add("property");
-    const pagesText = document.createElement("p");
-    pagesText.classList.add("property");
-    const readBtn = document.createElement("button");
-    readBtn.classList.add("property chag");
-    const rmBtn = document.getElementById("button");
-    rmBtn.classList.add("property rm");
+// Update display function
+const updateDisplay = () => {
+    const container = document.getElementById("book-grid");
+    while (container.firstChild){
+        container.firstChild.remove();  
+    };
+    library.books.forEach(book => {
+        let bookDisplay = document.createElement("div");
+        bookDisplay.classList.add("library-display");
+        container.appendChild(bookDisplay);
+        let titleText = document.createElement("p");
+        titleText.classList.add("property");
+        titleText.textContent = book.title;
+        bookDisplay.appendChild(titleText);
+        let authorText = document.createElement("p");
+        authorText.classList.add("property");
+        authorText.textContent = book.author;
+        bookDisplay.appendChild(authorText);
+        let pagesText = document.createElement("p");
+        pagesText.classList.add("property");
+        pagesText.textContent = `${book.pages} Pages`;
+        bookDisplay.appendChild(pagesText);
+        let readBtn = document.createElement("button");
+        readBtn.classList.add("property");
+        readBtn.classList.add("chg");
+        bookDisplay.appendChild(readBtn);
+        let rmBtn = document.createElement("button");
+        rmBtn.classList.add("property");
+        rmBtn.classList.add("rm");
+        bookDisplay.appendChild(rmBtn);
+    });
 }
 
 // Make pop up form 
@@ -89,9 +107,3 @@ form.addEventListener('submit', (event) => {
     event.preventDefault();
 });
 
-// trail btn
-const trial = document.getElementById("trial");
-
-trial.addEventListener("click", () => {
-    console.log(library)
-})
