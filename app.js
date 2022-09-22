@@ -83,6 +83,10 @@ const updateDisplay = () => {
         rmBtn.classList.add("rm");
         rmBtn.textContent = "Remove";;
         rmBtn.value = book.title;
+        rmBtn.addEventListener("click", () => {
+            library.removeBook(rmBtn.value);
+            updateDisplay();
+        })
         bookDisplay.appendChild(rmBtn);
     });
 }
