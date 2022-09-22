@@ -26,7 +26,7 @@ class Library {
         this.books = this.books.filter(book => book.title !== title);
     }
     getBook(title){
-        return this.books.find(book.title == title);
+        return this.books.find(book => book.title == title);
     }
 }
 
@@ -77,6 +77,11 @@ const updateDisplay = () => {
             readBtn.classList.add("not-read");
             readBtn.textContent = "Not Read"
         }
+        readBtn.value = book.title;
+        readBtn.addEventListener("click", () => {
+            library.getBook(readBtn.value).read = library.getBook(readBtn.value).read != true;
+            updateDisplay();
+        })
         bookDisplay.appendChild(readBtn);
         let rmBtn = document.createElement("button");
         rmBtn.classList.add("property");
