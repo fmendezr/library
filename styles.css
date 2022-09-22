@@ -185,9 +185,3 @@ footer > p > a:visited, footer > p > a:active  {
     pointer-events: all;
 }
 
-/* trial */
-
-#trial {
-    width: 50%;
-    height: 20%;
-}

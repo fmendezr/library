@@ -70,10 +70,18 @@ const updateDisplay = () => {
         let readBtn = document.createElement("button");
         readBtn.classList.add("property");
         readBtn.classList.add("chg");
+        if (book.read == true){
+            readBtn.classList.add("read");
+            readBtn.textContent = "Read";
+        } else {
+            readBtn.classList.add("not-read");
+            readBtn.textContent = "Not Read"
+        }
         bookDisplay.appendChild(readBtn);
         let rmBtn = document.createElement("button");
         rmBtn.classList.add("property");
         rmBtn.classList.add("rm");
+        rmBtn.textContent = "Remove";;
         bookDisplay.appendChild(rmBtn);
     });
 }
