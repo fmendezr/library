@@ -124,9 +124,3 @@ const form = document.getElementById("modal-form")
 form.addEventListener('submit', (event) => {
     event.preventDefault();
 });
-
-
-// trial button 
-const trial = document.getElementById("trial")
-trial.addEventListener("click", () => {
-})
