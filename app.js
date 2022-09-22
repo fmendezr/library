@@ -23,7 +23,7 @@ class Library {
             this.books.push(newBook);
     }
     removeBook(title){
-        this.books.filter(book => book.title != title);
+        this.books = this.books.filter(book => book.title !== title);
     }
     getBook(title){
         return this.books.find(book.title == title);
@@ -82,6 +82,7 @@ const updateDisplay = () => {
         rmBtn.classList.add("property");
         rmBtn.classList.add("rm");
         rmBtn.textContent = "Remove";;
+        rmBtn.value = book.title;
         bookDisplay.appendChild(rmBtn);
     });
 }
@@ -115,3 +116,8 @@ form.addEventListener('submit', (event) => {
     event.preventDefault();
 });
 
+
+// trial button 
+const trial = document.getElementById("trial")
+trial.addEventListener("click", () => {
+})
